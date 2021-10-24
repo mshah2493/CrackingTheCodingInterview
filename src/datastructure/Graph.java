@@ -13,6 +13,7 @@ public class Graph {
 			nodes.add(node);
 			map.put(name, node);
 		}
+		
 		return map.get(name);
 	}
 

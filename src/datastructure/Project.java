@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Project {
+	public enum State {COMPLETE, PARTIAL, BLANK};
+	private State state = State.BLANK;
+	public State getState() {	return state;	}
+	public void setState(State st) {	state = st;		}
+	
 	private ArrayList<Project> children = new ArrayList<>();
 	private HashMap<String, Project> map = new HashMap<>();
 	
