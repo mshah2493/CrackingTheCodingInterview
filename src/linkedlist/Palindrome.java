@@ -5,6 +5,7 @@ import java.util.Stack;
 import datastructure.ListNode;
 
 public class Palindrome {
+	private static ListNode front = null;
 	public static boolean isPalindrome(ListNode head) {
 	    if (head == null || head.next == null)
 	    {
@@ -49,5 +50,21 @@ public class Palindrome {
 	    if (stack.isEmpty()) return true;
 	    
 	    return false;
+	}
+	
+	public static boolean isPalindromeRecursive(ListNode head) {
+		front = head;
+        return recursivelyCheck(head);
+	}
+	
+	private static boolean recursivelyCheck(ListNode head) {
+		if (head != null) {
+			if (!recursivelyCheck(head.next)) return false;
+			
+			if (front.val != head.val) return false;
+			front = front.next;
+		}
+		
+		return true;
 	}
 }
