@@ -22,4 +22,13 @@ public class ListNode {
 		
 		return head;
 	}
+	
+	public ListNode getList2() {
+		ListNode head = new ListNode(4);
+		head.next(new ListNode(5));
+		head.next.next(new ListNode(6));
+		head.next.next.next(new ListNode(7));
+		
+		return head;
+	}
 }
